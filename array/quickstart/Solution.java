@@ -34,6 +34,7 @@ public class Solution {
         System.out.print("Enter elements space seperated : ");
         for(int i=0; i<n; i++) arr[i] = sc.nextInt();
         System.out.println();
+        sc.close();
         return arr;
     }
     
