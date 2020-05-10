@@ -1,13 +1,12 @@
 class Solution {
 
     public boolean binarySquareroot(int square, int l, int h) {
-        if(l <= h) {
+        while (l <= h) {
             int mid = (l+h)/2;
             double midSquare = (double)mid*(double)mid;
             if(midSquare == square) return true;
-            if(midSquare > square)
-                return binarySquareroot(square, l, mid-1);
-            return binarySquareroot(square, mid+1, h);
+            if(midSquare > square)  h =  mid-1;
+            else l = mid+1;
         }
         return false;
     }
@@ -15,8 +14,7 @@ class Solution {
     public boolean isPerfectSquare(int num) {
         if(num ==1 ) return true;
         int temp = Integer.toBinaryString(num).length(), reqL;
-        if(temp%2 == 0)  reqL = temp/ 2;
-        reqL = temp/2 + 1; 
+        reqL = temp/2 + temp%2; 
         int temp2 = (1 << (reqL + 1)) - 1;
         return binarySquareroot(num, 1, temp2);
     }
@@ -40,7 +38,7 @@ class Solution {
     if n is even:
         square root of n will have n/2 bits
     if n is odd
-        square root of n will have n/2 or (n/2)+1 bits
+        square root of n will have n/2 or (n/2)+1 bits so we are taking (n/2)+1
     
     so calculate number of bits in n, then according to above calculation take n/2 or (n/2)+1  bit max number,
     like 3 bit max number is 111 -> 7
