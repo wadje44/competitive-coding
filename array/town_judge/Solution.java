@@ -1,4 +1,5 @@
 class Solution {
+
     public int findJudge(int N, int[][] trust) {
         if(N == 1) return 1;
         int count[] = new int[N], max = 0, judge=-1;
@@ -15,14 +16,6 @@ class Solution {
             }
         }
         if(!notJudge[judge-1] && max == N-1) return judge;
-        max = -1;
-        judge = -1;
-        for(int i=0; i<N; i++) {
-            if(!notJudge[i] && count[i]>max) {
-                max = count[i];
-                judge = i+1;
-            }
-        }
         return -1;
     }
 }
