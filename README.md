@@ -18,3 +18,4 @@ Sr no | Question | Algorithm | Level | Type | Question or Tutorial URL
 10 | [Is perfect square](random/is_perfect_square/README.md) | Binary search and Bit manipulation | Easy | Challenge | [May Leetcode challenge](https://leetcode.com/explore/challenge/card/may-leetcoding-challenge/535/week-2-may-8th-may-14th/3324/)
 11 | [Town Judge](array/town_judge/README.md) | Hashing | Easy | Challenge | [May Leetcode challenge](https://leetcode.com/explore/challenge/card/may-leetcoding-challenge/535/week-2-may-8th-may-14th/3325/)
 12 | [Flood fill](string/flood_fill/README.md) | Recursion | Very Easy | Challenge | [May Leetcode challenge](https://leetcode.com/explore/challenge/card/may-leetcoding-challenge/535/week-2-may-8th-may-14th/3326/)
+13 | [Alternate binary string](string/alternate_binary_string/README.md) | Straight forward | Very Easy | Practice | NA
