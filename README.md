@@ -196,6 +196,22 @@ Following are the problems and solutions in this repo. Click on the `Question` c
         </a>
     </td>
   </tr>
+  <tr>
+    <td>12</td>
+    <td>
+        <a href="challenges/leet_code/may_challenge/12_may_non_duplicate_element/README.md">
+            Non duplicate element
+        </a>
+    </td>
+    <td>Modified Binary Search</td>
+    <td>Array</td>
+    <td>Medium</td>
+    <td>
+        <a href="https://leetcode.com/explore/challenge/card/may-leetcoding-challenge/535/week-2-may-8th-may-14th/3327/">
+            12 May Leetcode
+        </a>
+    </td>
+  </tr>
 
 </tbody>
 </table>
