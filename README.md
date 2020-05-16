@@ -107,7 +107,7 @@ Following are the problems and solutions in this repo. Click on the `Question` c
             Majority Element
         </a>
     </td>
-    <td>Library IndexOf methods</td>
+    <td>Recursion</td>
     <td>Array</td>
     <td>Very Easy</td>
     <td>
@@ -139,7 +139,7 @@ Following are the problems and solutions in this repo. Click on the `Question` c
             Check if straight line
         </a>
     </td>
-    <td>Recursion</td>
+    <td>Slope formula</td>
     <td>Array</td>
     <td>Easy</td>
     <td>
@@ -155,7 +155,7 @@ Following are the problems and solutions in this repo. Click on the `Question` c
             Valid perfect square
         </a>
     </td>
-    <td>Slope formula</td>
+    <td>Binary search and Bit manipulation</td>
     <td>Integer</td>
     <td>Very Easy</td>
     <td>
@@ -171,7 +171,7 @@ Following are the problems and solutions in this repo. Click on the `Question` c
             Find town judge
         </a>
     </td>
-    <td>Binary search and Bit manipulation</td>
+    <td>Hashing</td>
     <td>Array</td>
     <td>Easy</td>
     <td>
@@ -203,7 +203,7 @@ Following are the problems and solutions in this repo. Click on the `Question` c
             Non duplicate element
         </a>
     </td>
-    <td>Modified Binary Search</td>
+    <td>Modified Binary Search (for normal solution)</td>
     <td>Array</td>
     <td>Medium</td>
     <td>
@@ -258,6 +258,23 @@ Following are the problems and solutions in this repo. Click on the `Question` c
     <td>
         <a href="https://leetcode.com/explore/challenge/card/may-leetcoding-challenge/536/week-3-may-15th-may-21st/3330/">
             15 May Leetcode
+        </a>
+    </td>
+  </tr>
+
+  <tr>
+    <td>16</td>
+    <td>
+        <a href="challenges/leet_code/may_challenge/16_may_odd_even_linked_list/README.md">
+            Odd even linked list
+        </a>
+    </td>
+    <td>Straight forward</td>
+    <td>Linked list</td>
+    <td>Very easy</td>
+    <td>
+        <a href="https://leetcode.com/explore/challenge/card/may-leetcoding-challenge/536/week-3-may-15th-may-21st/3331/">
+            16 May Leetcode
         </a>
     </td>
   </tr>
