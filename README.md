@@ -228,6 +228,22 @@ Following are the problems and solutions in this repo. Click on the `Question` c
         </a>
     </td>
   </tr>
+  <tr>
+    <td>14</td>
+    <td>
+        <a href="challenges/leet_code/may_challenge/14_may_implement_trie/README.md">
+            Implement trie (Prefix tree)
+        </a>
+    </td>
+    <td>Tree map and inbuilt functions</td>
+    <td>Sorted Map</td>
+    <td>Medium</td>
+    <td>
+        <a href="https://leetcode.com/explore/challenge/card/may-leetcoding-challenge/535/week-2-may-8th-may-14th/3329/">
+            14 May Leetcode
+        </a>
+    </td>
+  </tr>
 
 </tbody>
 </table>
