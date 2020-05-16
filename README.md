@@ -187,7 +187,7 @@ Following are the problems and solutions in this repo. Click on the `Question` c
             Flood fill
         </a>
     </td>
-    <td>Hashing</td>
+    <td>Recursion</td>
     <td>2D Array</td>
     <td>Easy</td>
     <td>
@@ -209,6 +209,22 @@ Following are the problems and solutions in this repo. Click on the `Question` c
     <td>
         <a href="https://leetcode.com/explore/challenge/card/may-leetcoding-challenge/535/week-2-may-8th-may-14th/3327/">
             12 May Leetcode
+        </a>
+    </td>
+  </tr>
+  <tr>
+    <td>13</td>
+    <td>
+        <a href="challenges/leet_code/may_challenge/13_may_remove_k_digits/README.md">
+            Remove k digits
+        </a>
+    </td>
+    <td>Stack/ Deque</td>
+    <td>Deque</td>
+    <td>Medium</td>
+    <td>
+        <a href="https://leetcode.com/explore/challenge/card/may-leetcoding-challenge/535/week-2-may-8th-may-14th/3328/">
+            13 May Leetcode
         </a>
     </td>
   </tr>
