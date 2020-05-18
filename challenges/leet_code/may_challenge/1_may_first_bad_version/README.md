@@ -14,4 +14,4 @@ You are given an API bool isBadVersion(version) which will return whether versio
         call isBadVersion(4) -> true
         Then 4 is the first bad version. 
 
-P.S. This question had a predefined class `VersionControl` with method `firstBadVersion`.
+P.S. This question had a predefined class `VersionControl` with method `isBadVersion`.
