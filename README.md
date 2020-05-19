@@ -313,6 +313,23 @@ Following are the problems and solutions in this repo. Click on the `Question` c
     </td>
   </tr>
 
+  <tr>
+    <td>19</td>
+    <td>
+        <a href="challenges/leet_code/may_challenge/19_may_online_stock_pan/README.md">
+            Online stock pan
+        </a>
+    </td>
+    <td>Recursion</td>
+    <td>Array</td>
+    <td>Easy</td>
+    <td>
+        <a href="https://leetcode.com/explore/challenge/card/may-leetcoding-challenge/536/week-3-may-15th-may-21st/3334/">
+            19 May Leetcode
+        </a>
+    </td>
+  </tr>
+
 </tbody>
 </table>
 <br/><br/>
