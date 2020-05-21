@@ -29,7 +29,9 @@ class StockSpanner {
         total++;
         return ans[total-1];
     }
+}
 
+public class Solution {
     public static void main(String args[]) {
         File folder = new File("test_cases/input");
         File[] listOfFiles = folder.listFiles();
