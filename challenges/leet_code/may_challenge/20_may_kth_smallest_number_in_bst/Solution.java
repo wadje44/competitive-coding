@@ -1,10 +1,9 @@
 import java.util.Deque;
 import java.util.*; 
 import java.io.*; 
-/*
+/**
  * Definition for a binary tree node.
  */
- 
 class TreeNode {
     int val;
     TreeNode left;
@@ -17,51 +16,38 @@ class TreeNode {
         this.right = right;
     }
 }
- 
-class Solution {
-    
-    public static void depthOfelement(TreeNode node, int x, int ans[], int height) {
+
+public class Solution {
+    public static void getKHeightElement(TreeNode node, int k, int[] parentIndexAns) {
         if(node != null) {
-            if( node.left != null) {
-                if(node.left.val == x) {
-                    ans[0] = node.val;
-                    ans[1] = height+1;
+            if(parentIndexAns[1] == -1) {
+                getKHeightElement(node.left, k, parentIndexAns);
+                parentIndexAns[0] += (1);
+                if((parentIndexAns[0]) == k) {
+                    parentIndexAns[1] = node.val;
                     return;
                 }
+                getKHeightElement(node.right, k,parentIndexAns);
             }
-            if( node.right != null) {
-                if(node.right.val == x) {
-                    ans[0] = node.val;
-                    ans[1] = height+1;
-                    return;
-                }
-            }
-            depthOfelement( node.left, x, ans, height+1);
-            depthOfelement( node.right, x, ans, height+1);
         }
-        return ;
     }
     
-    
-    public static boolean isCousins(TreeNode root, int x, int y) {
-        if(root.val == x || root.val==y) return false;
-        int[] leftParent= {root.val, 0};
-        int[] rightParent= {root.val, 0};
-        depthOfelement(root, x, leftParent, 1);
-        depthOfelement(root, y, rightParent, 1);
-        return (leftParent[0] != rightParent[0]) && (leftParent[1] == rightParent[1]);
+    public static int kthSmallest(TreeNode root, int k) {
+        int[] parentIndexAns = new int[] {0, -1};
+        getKHeightElement(root, k, parentIndexAns);
+        return parentIndexAns[1];
     }
 
     public static void main(String args[]) {
         File folder = new File("test_cases/input");
         File[] listOfFiles = folder.listFiles();
         for (int i = 0; i < listOfFiles.length; i++) {
-            String[] paramsInString = readLinesAsStrings(String.format("test_cases/input/%s", listOfFiles[i].getName()),3);
+            String[] paramsInString = readLinesAsStrings(String.format("test_cases/input/%s", listOfFiles[i].getName()),2);
             String[] paramsStringArray = paramsInString[0].substring(1, paramsInString[0].length()-1).split(",");
             TreeNode head = createTree(paramsStringArray);
             printTree(head);
             System.out.println();
-            String[] result = new String[] {Boolean.toString(isCousins(head, Integer.parseInt(paramsInString[1]), Integer.parseInt(paramsInString[2])))};
+            String[] result = new String[] {Integer.toString(kthSmallest(head, Integer.parseInt(paramsInString[1])))};
             writeLinesAsStrings(String.format("test_cases/output/%d.txt",(i+1)), result);
         }
     }

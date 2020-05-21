@@ -330,6 +330,23 @@ Following are the problems and solutions in this repo. Click on the `Question` c
     </td>
   </tr>
 
+  <tr>
+    <td>20</td>
+    <td>
+        <a href="challenges/leet_code/may_challenge/20_may_kth_smallest_number_in_bst/README.md">
+            Kth smallest number in BST
+        </a>
+    </td>
+    <td>Recursion</td>
+    <td>Tree</td>
+    <td>Easy</td>
+    <td>
+        <a href="https://leetcode.com/explore/challenge/card/may-leetcoding-challenge/536/week-3-may-15th-may-21st/3335/">
+            20 May Leetcode
+        </a>
+    </td>
+  </tr>
+
 </tbody>
 </table>
 <br/><br/>
