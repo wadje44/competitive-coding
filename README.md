@@ -400,6 +400,23 @@ Following are the problems and solutions in this repo. Click on the `Question` c
     </td>
   </tr>
 
+  <tr>
+    <td>2</td>
+    <td>
+        <a href="challenges/hackerearth/may_circuits_2020/02_factorial_equations/README.md">
+            Factorial Power equation
+        </a>
+    </td>
+    <td>Straight forward</td>
+    <td>Integer</td>
+    <td>Easy</td>
+    <td>
+        <a href="https://www.hackerearth.com/challenges/competitive/may-circuits-20/algorithm/powerful-of-factorial-cb263e5b/">
+            Second question
+        </a>
+    </td>
+  </tr>
+
 </tbody>
 </table>
 <br/><br/>
