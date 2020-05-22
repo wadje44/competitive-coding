@@ -347,6 +347,23 @@ Following are the problems and solutions in this repo. Click on the `Question` c
     </td>
   </tr>
 
+  <tr>
+    <td>21</td>
+    <td>
+        <a href="challenges/leet_code/may_challenge/21_may_count_square_submatrices/README.md">
+            Count square submatrices
+        </a>
+    </td>
+    <td>Dp and Recursion</td>
+    <td>2D Array</td>
+    <td>Medium</td>
+    <td>
+        <a href="https://leetcode.com/explore/challenge/card/may-leetcoding-challenge/536/week-3-may-15th-may-21st/3336/">
+            21 May Leetcode
+        </a>
+    </td>
+  </tr>
+
 </tbody>
 </table>
 <br/><br/>
