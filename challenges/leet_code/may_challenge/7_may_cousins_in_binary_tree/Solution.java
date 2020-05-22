@@ -83,7 +83,10 @@ class Solution {
     public static void writeLinesAsStrings(String path, String[] data){
         try {
             BufferedWriter writer = new BufferedWriter(new FileWriter(path));
-            for(int i=0; i<data.length; i++) writer.write(data[i]);
+             for(int i=0; i<data.length; i++) {
+                writer.write(data[i]);
+                if(i!=(data.length-1)) writer.newLine();
+            }
             writer.close();
         } catch(IOException E) {
             System.out.println("IOException caught while reading file: " + E);

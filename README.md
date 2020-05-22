@@ -368,6 +368,42 @@ Following are the problems and solutions in this repo. Click on the `Question` c
 </table>
 <br/><br/>
 
+# Challenges
+
+## Hacker Earth May Circuits-2020
+<table>
+<thead>
+  <tr>
+    <th>Sr no</th>
+    <th>Question</th>
+    <th>Algorithm</th>
+    <th>Data structure</th>
+    <th>Level</th>
+    <th>Question</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td>1</td>
+    <td>
+        <a href="challenges/hackerearth/may_circuits_2020/01_number_of_cycles/README.md">
+            Number of cycles
+        </a>
+    </td>
+    <td>Straight forward</td>
+    <td>Long</td>
+    <td>Very Easy</td>
+    <td>
+        <a href="https://www.hackerearth.com/challenges/competitive/may-circuits-20/algorithm/cycle-count-0644f309/">
+            First question
+        </a>
+    </td>
+  </tr>
+
+</tbody>
+</table>
+<br/><br/>
+
 # Practice
 
 <table>
