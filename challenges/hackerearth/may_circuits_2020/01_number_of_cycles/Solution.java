@@ -1,34 +1,23 @@
+import java.util.*;
 import java.io.*; 
 
-class VersionControl {
-    public static int badVersion;
+class Solution {
 
-    public static boolean isBadVersion(int t) {
-        if(t>=badVersion) return true;
-        return false;
+    public static long actualLogic(int data) {
+        long n =  data;
+        return ((n*(n-1))+1);
     }
-}
 
-public class Solution extends VersionControl {
-
-    public static int firstBadVersion(int n) {
-        int low=1, high=n, mid = (low/2 +high/2);
-        while(low < high) {
-            if(isBadVersion(mid))
-                high = mid;
-            else
-                low = mid+1;
-            mid = (low/2+high/2);
-        }
-        return low;
-    }
     public static void main(String args[]) {
         File folder = new File("test_cases/input");
         File[] listOfFiles = folder.listFiles();
         for (int i = 0; i < listOfFiles.length; i++) {
-            String[] params = readLinesAsStrings(String.format("test_cases/input/%s", listOfFiles[i].getName()), 2);
-            badVersion = Integer.parseInt(params[1]);
-            String[] result = new String[] {Integer.toString(firstBadVersion(Integer.parseInt(params[0])))};
+            int numberOfTestcases = Integer.parseInt(readLinesAsStrings(String.format("test_cases/input/%s", listOfFiles[i].getName()), 1)[0]);
+            String[] testcasesString = readLinesAsStrings(String.format("test_cases/input/%s", listOfFiles[i].getName()), numberOfTestcases+1);
+            String[] result = new String[numberOfTestcases];
+            for(int j=1; j<=numberOfTestcases; j++) {
+                result[j-1] = Long.toString(actualLogic(Integer.parseInt(testcasesString[j])));
+            }
             writeLinesAsStrings(String.format("test_cases/output/%d.txt",(i+1)), result);
         }
     }
@@ -50,7 +39,7 @@ public class Solution extends VersionControl {
     public static void writeLinesAsStrings(String path, String[] data){
         try {
             BufferedWriter writer = new BufferedWriter(new FileWriter(path));
-             for(int i=0; i<data.length; i++) {
+            for(int i=0; i<data.length; i++) {
                 writer.write(data[i]);
                 if(i!=(data.length-1)) writer.newLine();
             }
