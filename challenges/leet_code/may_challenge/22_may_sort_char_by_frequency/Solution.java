@@ -1,4 +1,3 @@
-import java.io.*;
 import java.io.*; 
 import java.util.*;
 
@@ -24,12 +23,12 @@ class Solution {
     public static String frequencySort(String s) {
         char[] arr = s.toCharArray();
         ArrayList<CharCount> list = new ArrayList<CharCount>();
-        int count[] = new int[256];
+        int count[] = new int[128];
         int i;
         for(i=0;i<arr.length;i++) {
             count[arr[i]]++;
         }
-        for(i=0;i<256;i++) {
+        for(i=0;i<128;i++) {
             
             if(count[i] != 0) {
                 list.add(new CharCount((char) (i), count[i]));
