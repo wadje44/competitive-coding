@@ -434,6 +434,23 @@ Following are the problems and solutions in this repo. Click on the `Question` c
     </td>
   </tr>
 
+  <tr>
+    <td>4</td>
+    <td>
+        <a href="challenges/hackerearth/may_circuits_2020/04_number_of_divisors/README.md">
+            Number of divisors
+        </a>
+    </td>
+    <td>Pattern finding</td>
+    <td>Array</td>
+    <td>Medium</td>
+    <td>
+        <a href="https://www.hackerearth.com/challenges/competitive/may-circuits-20/algorithm/k-excess-1-be669e5a/">
+            Fourth question
+        </a>
+    </td>
+  </tr>
+
 </tbody>
 </table>
 <br/><br/>
