@@ -385,7 +385,40 @@ Following are the problems and solutions in this repo. Click on the `Question` c
 </table>
 <br/><br/>
 
-# Challenges
+## Leetcode May-2020
+<table>
+<thead>
+  <tr>
+    <th>Sr no</th>
+    <th>Question</th>
+    <th>Algorithm</th>
+    <th>Data structure</th>
+    <th>Level</th>
+    <th>Question</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td>3</td>
+    <td>
+        <a href="challenges/leet_code/june_challenge/03_june_two_city_scheduling/README.md">
+            Two city scheduling
+        </a>
+    </td>
+    <td>Sorting & DP</td>
+    <td>2D Array</td>
+    <td>Medium</td>
+    <td>
+        <a href="https://leetcode.com/explore/challenge/card/june-leetcoding-challenge/539/week-1-june-1st-june-7th/3349/">
+            3 June Leetcode
+        </a>
+    </td>
+  </tr>
+
+</tbody>
+</table>
+<br/><br/>
+
 
 ## Hacker Earth May Circuits-2020
 <table>
