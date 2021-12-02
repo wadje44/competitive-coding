@@ -36,4 +36,8 @@ In this example, there are 5 sums that are larger than the previous sum.
 
 Consider sums of a three-measurement sliding window. How many sums are larger than the previous sum?
 
-Your puzzle answer was 1822.
+# Run Instructions
+
+To test custom input, add a file in /test-cases/input/folder or update an existing file and run using following command
+
+        make run
