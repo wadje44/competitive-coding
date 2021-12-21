@@ -1,0 +1,119 @@
+{
+  "countryCode": "ZZ",
+  "sacHead": {
+    "sacUnit": "KSC",
+    "sacNumber": 10031893,
+    "sacCreateUser": "ARBE",
+    "sacCreateDateTime": "2000-01-20T13:24:05Z",
+    "updDateTime": "2018-02-20T10:35:32Z",
+    "queueStatus": "OPEN",
+    "caseHandler": "ARBE",
+    "storeNumber": "012",
+    "returnType": "SAC",
+    "sacComment": "Kund har fått tillgodokvitto som hon vill ha insatt på sitt Familykonto.//000120\r\nMadde2",
+    "sacTitle": "Insättning tillgodokvitto (test)",
+    "sacUnitBuType": "STO",
+    "version": 1,
+    "reasonCode": "ABC",
+    "subReasonCode": "ABC"
+  },
+  "customerInformation": [
+    {
+      "custId": "3215950",
+      "globalCustomerId": "1234567",
+      "ikeaFamilyNumber": "ABC",
+      "type": "Delivery",
+      "custType": "Not selected",
+      "addressLine1": "ABC",
+      "addressLine2": "ABC",
+      "addressLine3": "ABC",
+      "state": "ABC",
+      "country": "ABC",
+      "postCode": "69153",
+      "email": "ABC",
+      "telMobile": "ABC",
+      "nipNumber": "ABC",
+      "recipientCodeType": "ABC"
+    }
+  ],
+  "region": "ZZ",
+  "sourceId": "sdf.IntegrationTest",
+  "sacCustomerOrders": [
+    {
+      "orderNumber": "107-680602000",
+      "orderType": "1",
+      "updDateTime": "2002-10-01T14:18:05Z"
+    }
+  ],
+  "sacLines": [
+    {
+      "lineNumber": 2,
+      "updDateTime": "2000-01-20T13:24:05Z",
+      "lineType": "MONEY",
+      "itemId": "ABC",
+      "itemName": "bensinersättning/kontanter",
+      "qty": 1,
+      "reasonCode": "01",
+      "subReasonCode": "0101",
+      "currencyCode": "SEK",
+      "lineComment": "ABC",
+      "unit": "Pieces",
+      "direction": "OUT",
+      "importedFromOrderNumber": "ABC",
+      "importedfromordertype": "ABC",
+      "importedFromOrderNumberSource": "123",
+      "itemType": "ART",
+      "paymentId": "IKEA",
+      "paNumber": "ABC",
+      "originalUnitPrice": 123.67,
+      "originalQty": 123,
+      "tillNumber": 123,
+      "receiptId": 123,
+      "receiptBuCode": "ABC",
+      "receiptDate": "2000-01-20",
+      "unitPrice": 47.95,
+      "importedFromOrderLineId": null,
+      "saStatusId": "INFO",
+      "itemSerialDataMatrixCode": "ABC"
+    }
+  ],
+  "sacQueueLog": [
+    {
+      "queueId": "813-FRONTLINE",
+      "queueStatus": "ASSIGNED",
+      "userId": "813BART"
+    }
+  ],
+  "sacReturnInformation": {
+    "buUnit": "813",
+    "returnDateTime": "2008-11-17T01:00:00Z",
+    "returnId": 554204,
+    "employeeNumber": "ABC"
+  },
+  "sacSaLog": [
+    {
+      "noteText": "ABC",
+      "updDateTime": "2018-02-02T10:35:49Z",
+      "userId": "722BART"
+    }
+  ],
+  "sacScheduleActions": [
+    {
+      "actionComment": "kolla om sängen kommit in som vi ska skicka till kunden så fort lager finns. ",
+      "actionDate": "2019-09-21",
+      "actionType": "70"
+    }
+  ],
+  "sacWorkflowLog": [
+    {
+      "lineNumber": 1,
+      "saStatusId": "AUTH",
+      "saTypeId": "lCD UT",
+      "updDateTime": "2017-04-18T11:43:47Z",
+      "userId": "722DKAO"
+    }
+  ],
+  "id": "abc",
+  "eventType": "CustomerInteraction",
+  "payloadVersion": "2.0.0"
+}

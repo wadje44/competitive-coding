@@ -1,0 +1,31 @@
+{
+  "sacHead": {
+    "sacUnit": "KSC",
+    "sacNumber": 10031893,
+    "sacCreateDateTime": "2000-01-20T13:24:05Z",
+    "sacTitle": "Insättning tillgodokvitto (test)",
+    "queueUnitBuType": "STO",
+    "queueUnit": "KSC",
+    "queueId": "KSC-ÖVRIGT(2723)",
+    "reasonCode": "ABC",
+    "subReasonCode": "ABC"
+  },
+  "sacLines": [
+    {
+      "reasonCodeText": "ABC",
+      "importedFromOrderNumber": "ABC",
+      "customerOrderNumber": "ABC"
+    }
+  ],
+  "sacEvents": [
+    {
+      "updDateTime": "2013-09-12T07:41:19Z",
+      "eventText": "titta på ärende"
+    }
+  ],
+  "sourceId": "sdf.IntegrationTest",
+  "region": "ZZ",
+  "id": "abc",
+  "eventType": "UsSalesforce",
+  "payloadVersion": "2.0.0"
+}

@@ -1,0 +1,5 @@
+{
+  "NAMESPACE": "messages",
+  "KIND": "user",
+  "REQUEST_RETRY_LIMIT": 5
+}
