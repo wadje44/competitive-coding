@@ -1,8 +1,8 @@
 module.exports = {
   info: {
-    title: 'REST API CSDF',
-    version: '2.0.0',
-    description: 'This is the REST API for the Customer Support Data Foundation',
+    title: 'Message Service',
+    version: '1.0.0',
+    description: 'This is a microservice to store user messages and check if they are palindrome',
   },
   produces: ['application/json'],
   swagger: '2.0',

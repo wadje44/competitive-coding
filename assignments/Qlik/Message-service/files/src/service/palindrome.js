@@ -1,7 +1,7 @@
 const logger = require('../config/logger');
 const lib = require('../lib/palindrome');
 const util = require('../util/common-util');
-const NonFoundError = require('../exception/NonFoundError');
+const NotFoundError = require('../exception/NotFoundError');
 
 module.exports = {
 
@@ -36,7 +36,7 @@ module.exports = {
     if (messageDetails.length === 0) {
       const errorMessage = `Message not found for messageId: ${messageId}`;
       logger.error(errorMessage);
-      throw new NonFoundError(`checkifPalindrome`, errorMessage);
+      throw new NotFoundError(`checkifPalindrome`, errorMessage);
     }
     const isPalindrome = util.checkIfPalindrome(messageDetails[0].message);
     return { isPalindrome };
@@ -48,7 +48,7 @@ module.exports = {
     if (deleteResponse[0].indexUpdates === 0) {
       const errorMessage = `Message not found for messageId: ${messageId}`;
       logger.error(errorMessage);
-      throw new NonFoundError(`checkifPalindrome`, errorMessage);
+      throw new NotFoundError(`checkifPalindrome`, errorMessage);
     }
     logger.info(`Deleted message with messageId:${messageId}`);
     return { deletedId: messageId };

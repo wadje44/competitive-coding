@@ -5,7 +5,7 @@ build:
 	DOCKER_BUILDKIT=1 docker build -t $(DOCKER_IMAGE) .
 
 .PHONY: lint
-lint: pull-or-build
+lint: build
 	docker run --rm \
 		-v $(realpath ./files/src/tests):/src/tests \
 		${DOCKER_IMAGE} lint
@@ -23,8 +23,8 @@ lint-fix: build
 		${DOCKER_IMAGE} lint:fix
 
 .PHONY: test
-test: pull-or-build
+test: build
 	docker run --rm \
 	    -v $(realpath ./files/src/tests):/src/tests \
 		-v $(realpath ../)/box-schemas/files/tests/fixtures:/fixtures \
-		${DOCKER_IMAGE} test
+		${DOCKER_IMAGE} test -- palindrome

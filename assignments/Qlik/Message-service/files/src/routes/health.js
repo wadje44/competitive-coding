@@ -16,16 +16,6 @@ const router = express.Router();
  *           description: Success
  *           schema:
  *             $ref: "#/definitions/Health"
- * definitions:
- *   Health:
- *     type: object
- *     properties:
- *       uptime:
- *         type: "number"
- *       message:
- *         type: string
- *       timestamp:
- *         type: integer
  */
 router.use('/health', async (req, res) => {
   const healthcheck = {

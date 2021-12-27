@@ -1,6 +1,16 @@
 /**
  * @swagger
  * definitions:
+ *
+ *   Health:
+ *     type: object
+ *     properties:
+ *       uptime:
+ *         type: "number"
+ *       message:
+ *         type: string
+ *       timestamp:
+ *         type: integer
  *   AddMessageRequest:
  *     type: object
  *     properties:

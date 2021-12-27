@@ -1,4 +1,3 @@
-const logger = require('../config/logger');
 const db = require('../config/db-config');
 const constants = require('../constants/constants.json');
 const DatabaseQueryError = require('../exception/DatabaseQueryError');
@@ -13,14 +12,14 @@ const addQueryFilter = (
     throw new DatabaseQueryError('addQueryFilter', 'invalid baseQuery argument');
   }
   let query = baseQuery;
+  if (message) {
+    query = query.filter('message', '=', message);
+  }
   if (limit) {
     query = query.limit(limit);
   }
   if (offset) {
     query = query.offset(offset);
-  }
-  if (message) {
-    query = query.filter('region', '=', region);
   }
   return query;
 };
@@ -67,8 +66,12 @@ const getMessages = async (offset, limit) => {
     limit,
     offset,
   );
-
+  console.log("--------------------------")
   const messages = await runQuery(query);
+  console.log("++++++++++++++++++++++++")
+  console.log(messages)
+  console.log("++++++++++++++++++++++++")
+
   // Extract hidden key
   messages.map(message => {
     message.id = parseInt(message[db.KEY].id);

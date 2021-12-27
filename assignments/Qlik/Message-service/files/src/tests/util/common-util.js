@@ -1,23 +1,23 @@
 const util = require('../../util/common-util');
 const common = require('../common-setup');
 
-describe('Test updateSourceId function', () => {
-  it('Should return sdf as sourceId when real fullsac event is passed', () => {
+describe('Test checkIfPalindrome function', () => {
+  it('Should return true for palidrome string', () => {
     // ARRANGE
-    const expectedSourceId = 'sdf';
+    const input = 'abba';
 
     // ACT && ASSERT
-    const updatedSourceId = util.updateSourceId('SE', 'SAMS');
-    common.expect(updatedSourceId).to.eql(expectedSourceId);
+    const result = util.checkIfPalindrome(input);
+    common.expect(result).to.eql(true);
   });
 
-  it('Should return sdfIntegrationTest as sourceId when test event is passed', () => {
+  it('Should return false for palidrome string', () => {
     // ARRANGE
-    const expectedSourceId = 'sdf.IntegrationTest';
+    const input = 'abbadabbajabba';
 
     // ACT && ASSERT
-    const updatedSourceId = util.updateSourceId('ZZ', 'IntegrationTest');
-    common.expect(updatedSourceId).to.eql(expectedSourceId);
+    const result = util.checkIfPalindrome(input);
+    common.expect(result).to.eql(false);
   });
 });
 
