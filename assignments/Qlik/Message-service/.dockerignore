@@ -1,0 +1,5 @@
+node_modules
+.git
+.nyc_output
+.idea
+files/src/tests
