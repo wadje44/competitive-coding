@@ -2,7 +2,7 @@ name: Pull request create
 
 on:
   pull_request:
-    branches: [master]
+    branches: [master, new/nodejs-api-skeleton]
     types: [assigned, opened, synchronize, reopened]
 
 jobs:
