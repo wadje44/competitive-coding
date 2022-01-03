@@ -40,6 +40,7 @@ const router = express.Router();
  */
 router.post('/palindrome', validate({ body: addMessageSchema }), async (req, res, next) => {
   try {
+    logger.info("POST add message endpoint is called!");
     const result = await service.addMessage(req.body);
     return res.status(StatusCodes.CREATED).send(result);
   } catch (error) {
@@ -78,6 +79,7 @@ router.post('/palindrome', validate({ body: addMessageSchema }), async (req, res
  */
 router.get('/palindrome', validate({ query: getMessagesSchema }), async (req, res, next) => {
   try {
+    logger.info("GET get all messages endpoint is called!");
     const result = await service.getMessages(req.query);
     res.statusCode = StatusCodes.OK;
     return res.send(result);
@@ -116,6 +118,7 @@ router.get('/palindrome', validate({ query: getMessagesSchema }), async (req, re
  */
 router.get('/palindrome/check/:messageId', validate({ params: requestByIdSchema }), async (req, res, next) => {
   try {
+    logger.info("GET check is palindrome by id endpoint is called!");
     logger.info(typeof req.params.messageId);
     const result = await service.checkIfPalindrome(req.params);
     return res.status(StatusCodes.OK).send(result);
@@ -154,6 +157,7 @@ router.get('/palindrome/check/:messageId', validate({ params: requestByIdSchema 
  */
 router.delete('/palindrome/:messageId', validate({ params: requestByIdSchema }), async (req, res, next) => {
   try {
+    logger.info("DELETE by id endpoint is called!");
     const result = await service.deleteMessage(req.params);
     return res.status(StatusCodes.OK).send(result);
   } catch (error) {

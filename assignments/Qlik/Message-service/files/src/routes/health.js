@@ -18,6 +18,7 @@ const router = express.Router();
  *             $ref: "#/definitions/Health"
  */
 router.use('/health', async (req, res) => {
+  // health endpoint
   const healthcheck = {
     uptime: process.uptime(),
     message: 'OK',

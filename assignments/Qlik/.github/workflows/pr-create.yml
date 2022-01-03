@@ -1,0 +1,25 @@
+name: Pull request create
+on:
+  pull_request:
+    branches: [main]
+    types: [assigned, opened]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [12.x]
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v2
+        with:
+          node-version: ${{ matrix.node-version }}
+      - name: code lint
+        run: cd ./assignments/Qlik/Message-service && make lint
+      - name: unit tests
+        run: cd ./assignments/Qlik/Message-service && make test
+      - name: Run unit tests

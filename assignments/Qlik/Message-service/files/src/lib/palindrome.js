@@ -2,6 +2,7 @@ const db = require('../config/db-config');
 const constants = require('../constants/constants.json');
 const DatabaseQueryError = require('../exception/DatabaseQueryError');
 
+// Add multiple filters to query if value is set before execution
 const addQueryFilter = (
   baseQuery,
   limit,
@@ -24,12 +25,14 @@ const addQueryFilter = (
   return query;
 };
 
+// Run database query and extract response
 const runQuery = async (query) => {
   if (!query) {
     throw new DatabaseQueryError('runQuery', 'invalid query argument');
   }
   try {
     const [queryResult] = await db.runQuery(query, {
+      // Database retry operation with exponetial backoff
       gaxOptions:
         { maxRetries: constants.REQUEST_RETRY_LIMIT },
     });
@@ -39,6 +42,7 @@ const runQuery = async (query) => {
   }
 };
 
+// Persist message in database
 const addMessage = async (message) => {
   const namespace = constants.NAMESPACE;
   const kind = constants.KIND;
@@ -56,6 +60,7 @@ const addMessage = async (message) => {
   return saveResponse;
 };
 
+// Fetch all messages with limit and offset
 const getMessages = async (offset, limit) => {
   const namespace = constants.NAMESPACE;
   const kind = constants.KIND;
@@ -66,11 +71,7 @@ const getMessages = async (offset, limit) => {
     limit,
     offset,
   );
-  console.log("--------------------------")
   const messages = await runQuery(query);
-  console.log("++++++++++++++++++++++++")
-  console.log(messages)
-  console.log("++++++++++++++++++++++++")
 
   // Extract hidden key
   messages.map(message => {
@@ -81,10 +82,12 @@ const getMessages = async (offset, limit) => {
   return messages;
 };
 
+// Fetch single message by Id with limit and offset
 const getMessageById = async (messageId) => {
   const namespace = constants.NAMESPACE;
   const kind = constants.KIND;
 
+  // Always only key filter is required in this case so buildQuery is not used
   const query = db.createQuery(namespace, kind)
     .filter('__key__', '=', db.key({ namespace, path: [kind, messageId] }));
   const messages = await runQuery(query);
@@ -92,6 +95,7 @@ const getMessageById = async (messageId) => {
   return messages;
 };
 
+// Delete message by id
 const deleteMessageById = async (messageId) => {
   const namespace = constants.NAMESPACE;
   const kind = constants.KIND;

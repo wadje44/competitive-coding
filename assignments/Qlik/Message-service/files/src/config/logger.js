@@ -8,10 +8,11 @@ const consoleLogger = new transports.Console({
   ),
 });
 
+// To send logs on common gcp logging service stackdriver
 const stackdriverLogger = new LoggingWinston({
   projectId: process.env.PROJECT_ID,
   serviceContext: {
-    service: 'rest-api',
+    service: 'message-service',
   },
 });
 
@@ -21,6 +22,7 @@ module.exports = createLogger({
     format.json(),
   ),
   transports: ((env) => {
+    // For running locally, only console log is used
     if (env === 'local-development') {
       return [consoleLogger];
     }

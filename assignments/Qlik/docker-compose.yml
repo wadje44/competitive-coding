@@ -2,7 +2,7 @@ version: '3.7'
 
 volumes:
   datastore:
-  node-rest:
+  node-backend:
 
 services:
   datastore:
@@ -30,12 +30,12 @@ services:
 
   message-service:
     build: ./Message-service
-    image : rest-api
+    image : message-service
     volumes:
       - ./Message-service/files/src:/src
-      - node-rest:/src/node_modules/
+      - node-backend:/src/node_modules/
     ports:
-      - 3003:3000
+      - 3003:3003
     command: ['nodemon', 'server.js']
     environment:
       - PROJECT_ID=gcp-project
@@ -45,3 +45,14 @@ services:
       - DO_DOWNSTREAM_AUTH=false
     depends_on:
       - datastore
+  
+  message-service-dashboard:
+    build: ./message-service-dashboard
+    image : message-service-dashboard
+    ports:
+      - 3000:3000
+    command: ['npm', 'start']
+    environment:
+      - API_URL=message-service:3003
+    depends_on:
+      - message-service

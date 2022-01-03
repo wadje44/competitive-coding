@@ -3,10 +3,14 @@ const logger = require('./logger');
 
 const env = process.env.NODE_ENV;
 
+// As only one datastore instance is alloted for one gcp project
+// only project id is sufficient for connection
 let config = {
   projectId: process.env.PROJECT_ID,
 };
 
+// For local environment, connect to emulator
+// Emulator port and url needs to be added in config
 if (env === 'local-development') {
   config = {
     projectId: process.env.PROJECT_ID,
@@ -15,6 +19,7 @@ if (env === 'local-development') {
   };
 }
 
+// Creating reusable client object to connect databse
 const createDatastoreClient = (configuration) => {
   let datastore;
   try {
@@ -24,4 +29,6 @@ const createDatastoreClient = (configuration) => {
   }
   return datastore;
 };
+
+// Exporting object instead of method as creating client is one time job
 module.exports = createDatastoreClient(config);
