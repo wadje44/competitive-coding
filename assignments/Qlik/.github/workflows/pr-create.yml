@@ -1,7 +1,8 @@
 name: Pull request create
 on:
   pull_request:
-    branches: [main]
+    branches:
+      - "*"
     types: [assigned, opened]
 jobs:
   build:
