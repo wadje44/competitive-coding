@@ -37,9 +37,9 @@ class Solution {
             counter++;
           }
         }
-        System.out.println("input " + (fi + 1) + " answer is: " + counter);
+        System.out.println("input " + listOfFiles[fi].getName() + " answer is: " + counter);
         BufferedWriter writer = new BufferedWriter(
-            new FileWriter("./test-cases/output/" + (fi + 1) + ".txt"));
+            new FileWriter("./test-cases/output/" + listOfFiles[fi].getName()));
         writer.write(" answer is: " + counter);
         writer.close();
       }
